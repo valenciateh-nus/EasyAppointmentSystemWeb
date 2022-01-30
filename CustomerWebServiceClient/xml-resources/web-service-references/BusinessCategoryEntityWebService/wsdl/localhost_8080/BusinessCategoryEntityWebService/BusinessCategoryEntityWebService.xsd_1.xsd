@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://ws.session.ejb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.session.ejb/">
+
+<xs:element name="BusinessCategoryExistException" type="tns:BusinessCategoryExistException"/>
+
+<xs:element name="BusinessCategoryNotFoundException" type="tns:BusinessCategoryNotFoundException"/>
+
+<xs:element name="DeleteBusinessCategoryException" type="tns:DeleteBusinessCategoryException"/>
+
+<xs:element name="InputDataValidationException" type="tns:InputDataValidationException"/>
+
+<xs:element name="InvalidLoginCredentialException" type="tns:InvalidLoginCredentialException"/>
+
+<xs:element name="UnknownPersistenceException" type="tns:UnknownPersistenceException"/>
+
+<xs:element name="createNewBusinessCategoryEntity" type="tns:createNewBusinessCategoryEntity"/>
+
+<xs:element name="createNewBusinessCategoryEntityResponse" type="tns:createNewBusinessCategoryEntityResponse"/>
+
+<xs:element name="deleteBusinessCategory" type="tns:deleteBusinessCategory"/>
+
+<xs:element name="deleteBusinessCategoryResponse" type="tns:deleteBusinessCategoryResponse"/>
+
+<xs:element name="retrieveAllBusinessCategories" type="tns:retrieveAllBusinessCategories"/>
+
+<xs:element name="retrieveAllBusinessCategoriesResponse" type="tns:retrieveAllBusinessCategoriesResponse"/>
+
+<xs:element name="retrieveBusinessCategoriesById" type="tns:retrieveBusinessCategoriesById"/>
+
+<xs:element name="retrieveBusinessCategoriesByIdResponse" type="tns:retrieveBusinessCategoriesByIdResponse"/>
+
+<xs:element name="retrieveBusinessCategoriesByName" type="tns:retrieveBusinessCategoriesByName"/>
+
+<xs:element name="retrieveBusinessCategoriesByNameResponse" type="tns:retrieveBusinessCategoriesByNameResponse"/>
+
+<xs:complexType name="deleteBusinessCategory">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="businessCategoryId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteBusinessCategoryResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="InvalidLoginCredentialException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BusinessCategoryNotFoundException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DeleteBusinessCategoryException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveBusinessCategoriesById">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="businessCategoryId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveBusinessCategoriesByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:businessCategoryEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="businessCategoryEntity">
+<xs:sequence>
+<xs:element name="businessCategoryId" type="xs:long" minOccurs="0"/>
+<xs:element name="category" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveBusinessCategoriesByName">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="businessCategoryName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveBusinessCategoriesByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:businessCategoryEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNewBusinessCategoryEntity">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="businessCategoryEntity" type="tns:businessCategoryEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNewBusinessCategoryEntityResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BusinessCategoryExistException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UnknownPersistenceException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InputDataValidationException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAllBusinessCategories">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAllBusinessCategoriesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:businessCategoryEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/CustomerWebService/CustomerWebService?WSDL" uri="wsdl/localhost_8080/CustomerWebService/CustomerWebService.wsdl"/>
+    <system systemId="http://localhost:8080/CustomerWebService/CustomerWebService?xsd=1" uri="wsdl/localhost_8080/CustomerWebService/CustomerWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/BookingWebService/BookingWebService?WSDL" uri="wsdl/localhost_8080/BookingWebService/BookingWebService.wsdl"/>
+    <system systemId="http://localhost:8080/BookingWebService/BookingWebService?xsd=1" uri="wsdl/localhost_8080/BookingWebService/BookingWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServiceProviderWebService/ServiceProviderWebService?WSDL" uri="wsdl/localhost_8080/ServiceProviderWebService/ServiceProviderWebService.wsdl"/>
+    <system systemId="http://localhost:8080/ServiceProviderWebService/ServiceProviderWebService?xsd=1" uri="wsdl/localhost_8080/ServiceProviderWebService/ServiceProviderWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/AppointmentEntityWebService/AppointmentEntityWebService?WSDL" uri="wsdl/localhost_8080/AppointmentEntityWebService/AppointmentEntityWebService.wsdl"/>
+    <system systemId="http://localhost:8080/AppointmentEntityWebService/AppointmentEntityWebService?xsd=1" uri="wsdl/localhost_8080/AppointmentEntityWebService/AppointmentEntityWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/EmailWebService/EmailWebService?WSDL" uri="wsdl/localhost_8080/EmailWebService/EmailWebService.wsdl"/>
+    <system systemId="http://localhost:8080/EmailWebService/EmailWebService?xsd=1" uri="wsdl/localhost_8080/EmailWebService/EmailWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/BusinessCategoryEntityWebService/BusinessCategoryEntityWebService?Tester" uri="wsdl/localhost_8080/BusinessCategoryEntityWebService/BusinessCategoryEntityWebService.tester"/>
+    <system systemId="http://localhost:8080/BusinessCategoryEntityWebService/BusinessCategoryEntityWebService?WSDL" uri="wsdl/localhost_8080/BusinessCategoryEntityWebService/BusinessCategoryEntityWebService.wsdl"/>
+    <system systemId="http://localhost:8080/BusinessCategoryEntityWebService/BusinessCategoryEntityWebService?xsd=1" uri="wsdl/localhost_8080/BusinessCategoryEntityWebService/BusinessCategoryEntityWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/CustomerWebService/CustomerWebService?Tester" uri="wsdl/localhost_8080/CustomerWebService/CustomerWebService.tester"/>
+</catalog>

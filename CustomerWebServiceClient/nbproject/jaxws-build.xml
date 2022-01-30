@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-EmailWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/EmailWebService"/>
+        <property name="wsdl-EmailWebService" location="xml-resources/web-service-references/EmailWebService/wsdl/localhost_8080/EmailWebService/EmailWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EmailWebService" destdir="${build.generated.dir}/jax-wsCache/EmailWebService" wsdl="${wsdl-EmailWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/EmailWebService/EmailWebService?WSDL" xnocompile="true" xendorsed="true" package="ws.client">
+            <depends file="${wsdl-EmailWebService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/EmailWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/EmailWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-EmailWebService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/EmailWebService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws/client"/>
+    </target>
+    <target name="wsimport-client-ServiceProviderWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServiceProviderWebService"/>
+        <property name="wsdl-ServiceProviderWebService" location="xml-resources/web-service-references/ServiceProviderWebService/wsdl/localhost_8080/ServiceProviderWebService/ServiceProviderWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServiceProviderWebService" destdir="${build.generated.dir}/jax-wsCache/ServiceProviderWebService" wsdl="${wsdl-ServiceProviderWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ServiceProviderWebService/ServiceProviderWebService?WSDL" xnocompile="true" xendorsed="true" package="ws.client">
+            <depends file="${wsdl-ServiceProviderWebService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServiceProviderWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServiceProviderWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServiceProviderWebService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServiceProviderWebService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws/client"/>
+    </target>
+    <target name="wsimport-client-BookingWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/BookingWebService"/>
+        <property name="wsdl-BookingWebService" location="xml-resources/web-service-references/BookingWebService/wsdl/localhost_8080/BookingWebService/BookingWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/BookingWebService" destdir="${build.generated.dir}/jax-wsCache/BookingWebService" wsdl="${wsdl-BookingWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/BookingWebService/BookingWebService?WSDL" xnocompile="true" xendorsed="true" package="ws.client">
+            <depends file="${wsdl-BookingWebService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/BookingWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/BookingWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-BookingWebService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/BookingWebService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws/client"/>
+    </target>
+    <target name="wsimport-client-AppointmentEntityWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/AppointmentEntityWebService"/>
+        <property name="wsdl-AppointmentEntityWebService" location="xml-resources/web-service-references/AppointmentEntityWebService/wsdl/localhost_8080/AppointmentEntityWebService/AppointmentEntityWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/AppointmentEntityWebService" destdir="${build.generated.dir}/jax-wsCache/AppointmentEntityWebService" wsdl="${wsdl-AppointmentEntityWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AppointmentEntityWebService/AppointmentEntityWebService?WSDL" xnocompile="true" xendorsed="true" package="ws.client">
+            <depends file="${wsdl-AppointmentEntityWebService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/AppointmentEntityWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/AppointmentEntityWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-AppointmentEntityWebService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/AppointmentEntityWebService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws/client"/>
+    </target>
+    <target name="wsimport-client-BusinessCategoryEntityWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/BusinessCategoryEntityWebService"/>
+        <property name="wsdl-BusinessCategoryEntityWebService" location="xml-resources/web-service-references/BusinessCategoryEntityWebService/wsdl/localhost_8080/BusinessCategoryEntityWebService/BusinessCategoryEntityWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/BusinessCategoryEntityWebService" destdir="${build.generated.dir}/jax-wsCache/BusinessCategoryEntityWebService" wsdl="${wsdl-BusinessCategoryEntityWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/BusinessCategoryEntityWebService/BusinessCategoryEntityWebService?WSDL" xnocompile="true" xendorsed="true" package="ws.client">
+            <depends file="${wsdl-BusinessCategoryEntityWebService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/BusinessCategoryEntityWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/BusinessCategoryEntityWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-BusinessCategoryEntityWebService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/BusinessCategoryEntityWebService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws/client"/>
+    </target>
+    <target name="wsimport-client-CustomerWebService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CustomerWebService"/>
+        <property name="wsdl-CustomerWebService" location="xml-resources/web-service-references/CustomerWebService/wsdl/localhost_8080/CustomerWebService/CustomerWebService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CustomerWebService" destdir="${build.generated.dir}/jax-wsCache/CustomerWebService" wsdl="${wsdl-CustomerWebService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/CustomerWebService/CustomerWebService?WSDL" xnocompile="true" xendorsed="true" package="ws.client">
+            <depends file="${wsdl-CustomerWebService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CustomerWebService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CustomerWebService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CustomerWebService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/CustomerWebService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws/client"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-EmailWebService, wsimport-client-ServiceProviderWebService, wsimport-client-BookingWebService, wsimport-client-AppointmentEntityWebService, wsimport-client-BusinessCategoryEntityWebService, wsimport-client-CustomerWebService"/>
+</project>

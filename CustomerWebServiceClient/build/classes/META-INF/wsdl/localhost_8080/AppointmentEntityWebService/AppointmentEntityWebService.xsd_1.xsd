@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://ws.session.ejb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.session.ejb/">
+
+<xs:element name="AppointmentNotFoundException" type="tns:AppointmentNotFoundException"/>
+
+<xs:element name="AppointmentNumberExistsException" type="tns:AppointmentNumberExistsException"/>
+
+<xs:element name="CustomerNotFoundException" type="tns:CustomerNotFoundException"/>
+
+<xs:element name="InputDataValidationException" type="tns:InputDataValidationException"/>
+
+<xs:element name="InputInvalidValuesException" type="tns:InputInvalidValuesException"/>
+
+<xs:element name="InvalidLoginCredentialException" type="tns:InvalidLoginCredentialException"/>
+
+<xs:element name="ServiceProviderBlockedException" type="tns:ServiceProviderBlockedException"/>
+
+<xs:element name="ServiceProviderNotFoundException" type="tns:ServiceProviderNotFoundException"/>
+
+<xs:element name="UnknownPersistenceException" type="tns:UnknownPersistenceException"/>
+
+<xs:element name="calculateDayOfTheWeek" type="tns:calculateDayOfTheWeek"/>
+
+<xs:element name="calculateDayOfTheWeekResponse" type="tns:calculateDayOfTheWeekResponse"/>
+
+<xs:element name="convertDate" type="tns:convertDate"/>
+
+<xs:element name="convertDateResponse" type="tns:convertDateResponse"/>
+
+<xs:element name="convertTime" type="tns:convertTime"/>
+
+<xs:element name="convertTimeResponse" type="tns:convertTimeResponse"/>
+
+<xs:element name="createNewAppointment" type="tns:createNewAppointment"/>
+
+<xs:element name="createNewAppointmentResponse" type="tns:createNewAppointmentResponse"/>
+
+<xs:element name="deleteAppointment" type="tns:deleteAppointment"/>
+
+<xs:element name="deleteAppointmentResponse" type="tns:deleteAppointmentResponse"/>
+
+<xs:element name="findAvailableTimeSlot" type="tns:findAvailableTimeSlot"/>
+
+<xs:element name="findAvailableTimeSlotResponse" type="tns:findAvailableTimeSlotResponse"/>
+
+<xs:element name="findFirstAvailableTime" type="tns:findFirstAvailableTime"/>
+
+<xs:element name="findFirstAvailableTimeResponse" type="tns:findFirstAvailableTimeResponse"/>
+
+<xs:element name="getLocalTimeInString" type="tns:getLocalTimeInString"/>
+
+<xs:element name="getLocalTimeInStringResponse" type="tns:getLocalTimeInStringResponse"/>
+
+<xs:element name="ifAppointmentCanAdd" type="tns:ifAppointmentCanAdd"/>
+
+<xs:element name="ifAppointmentCanAddResponse" type="tns:ifAppointmentCanAddResponse"/>
+
+<xs:element name="ifAppointmentCanCancel" type="tns:ifAppointmentCanCancel"/>
+
+<xs:element name="ifAppointmentCanCancelResponse" type="tns:ifAppointmentCanCancelResponse"/>
+
+<xs:element name="ifCanRate" type="tns:ifCanRate"/>
+
+<xs:element name="ifCanRateResponse" type="tns:ifCanRateResponse"/>
+
+<xs:element name="ifDateHasNotPassed" type="tns:ifDateHasNotPassed"/>
+
+<xs:element name="ifDateHasNotPassedResponse" type="tns:ifDateHasNotPassedResponse"/>
+
+<xs:element name="retrieveAppointmentByAppointmentId" type="tns:retrieveAppointmentByAppointmentId"/>
+
+<xs:element name="retrieveAppointmentByAppointmentIdResponse" type="tns:retrieveAppointmentByAppointmentIdResponse"/>
+
+<xs:element name="retrieveAppointmentByAppointmentNumber" type="tns:retrieveAppointmentByAppointmentNumber"/>
+
+<xs:element name="retrieveAppointmentByAppointmentNumberResponse" type="tns:retrieveAppointmentByAppointmentNumberResponse"/>
+
+<xs:element name="retrieveAppointmentByCustomer" type="tns:retrieveAppointmentByCustomer"/>
+
+<xs:element name="retrieveAppointmentByCustomerResponse" type="tns:retrieveAppointmentByCustomerResponse"/>
+
+<xs:element name="retrieveAppointmentsByDate" type="tns:retrieveAppointmentsByDate"/>
+
+<xs:element name="retrieveAppointmentsByDateResponse" type="tns:retrieveAppointmentsByDateResponse"/>
+
+<xs:element name="retrieveAppointmentsByServiceProviderId" type="tns:retrieveAppointmentsByServiceProviderId"/>
+
+<xs:element name="retrieveAppointmentsByServiceProviderIdResponse" type="tns:retrieveAppointmentsByServiceProviderIdResponse"/>
+
+<xs:element name="retrieveSortedAppointmentsByDate" type="tns:retrieveSortedAppointmentsByDate"/>
+
+<xs:element name="retrieveSortedAppointmentsByDateResponse" type="tns:retrieveSortedAppointmentsByDateResponse"/>
+
+<xs:element name="updateAppointmentEntity" type="tns:updateAppointmentEntity"/>
+
+<xs:element name="updateAppointmentEntityRating" type="tns:updateAppointmentEntityRating"/>
+
+<xs:element name="updateAppointmentEntityRatingResponse" type="tns:updateAppointmentEntityRatingResponse"/>
+
+<xs:element name="updateAppointmentEntityResponse" type="tns:updateAppointmentEntityResponse"/>
+
+<xs:complexType name="ifAppointmentCanAdd">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="date" type="xs:string" minOccurs="0"/>
+<xs:element name="time" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ifAppointmentCanAddResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InvalidLoginCredentialException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AppointmentNotFoundException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InputInvalidValuesException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNewAppointment">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="customerId" type="xs:long" minOccurs="0"/>
+<xs:element name="serviceProviderId" type="xs:long" minOccurs="0"/>
+<xs:element name="newAppointmentEntity" type="tns:appointmentEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="appointmentEntity">
+<xs:sequence>
+<xs:element name="appointmentId" type="xs:long" minOccurs="0"/>
+<xs:element name="appointmentNo" type="xs:string" minOccurs="0"/>
+<xs:element name="businessCategoryEntity" type="tns:businessCategoryEntity" minOccurs="0"/>
+<xs:element name="hasRating" type="xs:boolean" minOccurs="0"/>
+<xs:element name="scheduledDate" type="xs:string" minOccurs="0"/>
+<xs:element name="scheduledTime" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="businessCategoryEntity">
+<xs:sequence>
+<xs:element name="businessCategoryId" type="xs:long" minOccurs="0"/>
+<xs:element name="category" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNewAppointmentResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UnknownPersistenceException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InputDataValidationException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AppointmentNumberExistsException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CustomerNotFoundException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ServiceProviderNotFoundException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ServiceProviderBlockedException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLocalTimeInString">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="time" type="tns:localTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="localTime" final="extension restriction">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getLocalTimeInStringResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAppointment">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="appointmentNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAppointmentResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAvailableTimeSlot">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="appointmentList" type="tns:appointmentEntity" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="timeSlots" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAvailableTimeSlotResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAppointmentByAppointmentId">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="appointmentId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAppointmentByAppointmentIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:appointmentEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ifAppointmentCanCancel">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="appointmentNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ifAppointmentCanCancelResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="convertDate">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="date" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="convertDateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:localDate" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="localDate" final="extension restriction">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="calculateDayOfTheWeek">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="date" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateDayOfTheWeekResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAppointmentByCustomer">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="customerId" type="xs:long" minOccurs="0"/>
+<xs:element name="serviceProviderId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAppointmentByCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:appointmentEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAppointmentByAppointmentNumber">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="appointmentNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAppointmentByAppointmentNumberResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:appointmentEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAppointmentEntityRating">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="appointmentId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAppointmentEntityRatingResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ifCanRate">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="apptList" type="tns:appointmentEntity" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="serviceProviderId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ifCanRateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAppointmentEntity">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="appointmentEntity" type="tns:appointmentEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAppointmentEntityResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findFirstAvailableTime">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="appointmentList" type="tns:appointmentEntity" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="timeSlots" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findFirstAvailableTimeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAppointmentsByDate">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="date" type="xs:string" minOccurs="0"/>
+<xs:element name="serviceProviderName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAppointmentsByDateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:appointmentEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveSortedAppointmentsByDate">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="date" type="xs:string" minOccurs="0"/>
+<xs:element name="serviceProviderId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveSortedAppointmentsByDateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:appointmentEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="convertTime">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="appointmentTime" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="convertTimeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:localTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ifDateHasNotPassed">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="date" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ifDateHasNotPassedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAppointmentsByServiceProviderId">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="serviceProviderId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAppointmentsByServiceProviderIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:appointmentEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

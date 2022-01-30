@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://ws.session.ejb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.session.ejb/">
+
+<xs:element name="InvalidLoginCredentialException" type="tns:InvalidLoginCredentialException"/>
+
+<xs:element name="ServiceProviderBlockedException" type="tns:ServiceProviderBlockedException"/>
+
+<xs:element name="ServiceProviderNotFoundException" type="tns:ServiceProviderNotFoundException"/>
+
+<xs:element name="retrieveAllServiceProviderEntity" type="tns:retrieveAllServiceProviderEntity"/>
+
+<xs:element name="retrieveAllServiceProviderEntityResponse" type="tns:retrieveAllServiceProviderEntityResponse"/>
+
+<xs:element name="retrieveServiceProviderEntityByEmail" type="tns:retrieveServiceProviderEntityByEmail"/>
+
+<xs:element name="retrieveServiceProviderEntityByEmailResponse" type="tns:retrieveServiceProviderEntityByEmailResponse"/>
+
+<xs:element name="retrieveServiceProviderEntityById" type="tns:retrieveServiceProviderEntityById"/>
+
+<xs:element name="retrieveServiceProviderEntityByIdResponse" type="tns:retrieveServiceProviderEntityByIdResponse"/>
+
+<xs:element name="retrieveServiceProviderEntityByName" type="tns:retrieveServiceProviderEntityByName"/>
+
+<xs:element name="retrieveServiceProviderEntityByNameResponse" type="tns:retrieveServiceProviderEntityByNameResponse"/>
+
+<xs:element name="retrieveServiceProviderEntityBySearch" type="tns:retrieveServiceProviderEntityBySearch"/>
+
+<xs:element name="retrieveServiceProviderEntityBySearchResponse" type="tns:retrieveServiceProviderEntityBySearchResponse"/>
+
+<xs:element name="updateRating" type="tns:updateRating"/>
+
+<xs:element name="updateRatingResponse" type="tns:updateRatingResponse"/>
+
+<xs:complexType name="retrieveServiceProviderEntityByName">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveServiceProviderEntityByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:serviceProviderEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="serviceProviderEntity">
+<xs:sequence>
+<xs:element name="appointmentEntities" type="tns:appointmentEntity" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="businessAddress" type="xs:string" minOccurs="0"/>
+<xs:element name="businessCategoryEntity" type="tns:businessCategoryEntity" minOccurs="0"/>
+<xs:element name="businessRegistrationNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+<xs:element name="emailAddress" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="numberOfRatings" type="xs:int"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="phoneNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="rating" type="xs:double" minOccurs="0"/>
+<xs:element name="serviceProviderId" type="xs:long" minOccurs="0"/>
+<xs:element name="statusEnum" type="tns:statusEnum" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="appointmentEntity">
+<xs:sequence>
+<xs:element name="appointmentId" type="xs:long" minOccurs="0"/>
+<xs:element name="appointmentNo" type="xs:string" minOccurs="0"/>
+<xs:element name="businessCategoryEntity" type="tns:businessCategoryEntity" minOccurs="0"/>
+<xs:element name="hasRating" type="xs:boolean" minOccurs="0"/>
+<xs:element name="scheduledDate" type="xs:string" minOccurs="0"/>
+<xs:element name="scheduledTime" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="businessCategoryEntity">
+<xs:sequence>
+<xs:element name="businessCategoryId" type="xs:long" minOccurs="0"/>
+<xs:element name="category" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InvalidLoginCredentialException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ServiceProviderNotFoundException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveServiceProviderEntityByEmail">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="serviceProviderEmail" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveServiceProviderEntityByEmailResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:serviceProviderEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveServiceProviderEntityById">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="serviceProviderId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveServiceProviderEntityByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:serviceProviderEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ServiceProviderBlockedException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAllServiceProviderEntity">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAllServiceProviderEntityResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:serviceProviderEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveServiceProviderEntityBySearch">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="businessCategory" type="xs:string" minOccurs="0"/>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveServiceProviderEntityBySearchResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:serviceProviderEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateRating">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="rating" type="xs:double" minOccurs="0"/>
+<xs:element name="serviceProviderId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateRatingResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:simpleType name="statusEnum">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Pending"/>
+<xs:enumeration value="Approved"/>
+<xs:enumeration value="Blocked"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

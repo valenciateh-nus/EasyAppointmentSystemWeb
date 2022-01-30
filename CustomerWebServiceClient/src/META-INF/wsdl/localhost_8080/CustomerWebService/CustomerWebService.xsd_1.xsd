@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://ws.session.ejb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.session.ejb/">
+
+<xs:element name="CustomerDeletionException" type="tns:CustomerDeletionException"/>
+
+<xs:element name="CustomerEmailExistsException" type="tns:CustomerEmailExistsException"/>
+
+<xs:element name="CustomerNotFoundException" type="tns:CustomerNotFoundException"/>
+
+<xs:element name="InputDataValidationException" type="tns:InputDataValidationException"/>
+
+<xs:element name="InvalidLoginCredentialException" type="tns:InvalidLoginCredentialException"/>
+
+<xs:element name="UnknownPersistenceException" type="tns:UnknownPersistenceException"/>
+
+<xs:element name="UpdateCustomerException" type="tns:UpdateCustomerException"/>
+
+<xs:element name="createNewCustomer" type="tns:createNewCustomer"/>
+
+<xs:element name="createNewCustomerResponse" type="tns:createNewCustomerResponse"/>
+
+<xs:element name="customerLogin" type="tns:customerLogin"/>
+
+<xs:element name="customerLoginResponse" type="tns:customerLoginResponse"/>
+
+<xs:element name="deleteCustomer" type="tns:deleteCustomer"/>
+
+<xs:element name="deleteCustomerResponse" type="tns:deleteCustomerResponse"/>
+
+<xs:element name="retrieveAllCustomers" type="tns:retrieveAllCustomers"/>
+
+<xs:element name="retrieveAllCustomersResponse" type="tns:retrieveAllCustomersResponse"/>
+
+<xs:element name="retrieveCustomerByEmail" type="tns:retrieveCustomerByEmail"/>
+
+<xs:element name="retrieveCustomerByEmailResponse" type="tns:retrieveCustomerByEmailResponse"/>
+
+<xs:element name="retrieveCustomerEntityByCustomerId" type="tns:retrieveCustomerEntityByCustomerId"/>
+
+<xs:element name="retrieveCustomerEntityByCustomerIdResponse" type="tns:retrieveCustomerEntityByCustomerIdResponse"/>
+
+<xs:element name="updateCustomer" type="tns:updateCustomer"/>
+
+<xs:element name="updateCustomerResponse" type="tns:updateCustomerResponse"/>
+
+<xs:complexType name="customerLogin">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="loginEmail" type="xs:string" minOccurs="0"/>
+<xs:element name="loginPassword" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customerLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customerEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customerEntity">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="age" type="xs:int" minOccurs="0"/>
+<xs:element name="appointmentEntities" type="tns:appointmentEntity" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+<xs:element name="customerId" type="xs:long" minOccurs="0"/>
+<xs:element name="emailAddress" type="xs:string" minOccurs="0"/>
+<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+<xs:element name="gender" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="identityNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="phoneNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="appointmentEntity">
+<xs:sequence>
+<xs:element name="appointmentId" type="xs:long" minOccurs="0"/>
+<xs:element name="appointmentNo" type="xs:string" minOccurs="0"/>
+<xs:element name="businessCategoryEntity" type="tns:businessCategoryEntity" minOccurs="0"/>
+<xs:element name="hasRating" type="xs:boolean" minOccurs="0"/>
+<xs:element name="scheduledDate" type="xs:string" minOccurs="0"/>
+<xs:element name="scheduledTime" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="businessCategoryEntity">
+<xs:sequence>
+<xs:element name="businessCategoryId" type="xs:long" minOccurs="0"/>
+<xs:element name="category" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InvalidLoginCredentialException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNewCustomer">
+<xs:sequence>
+<xs:element name="customerEntity" type="tns:customerEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNewCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CustomerEmailExistsException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UnknownPersistenceException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InputDataValidationException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveCustomerEntityByCustomerId">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="customerId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveCustomerEntityByCustomerIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customerEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CustomerNotFoundException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveCustomerByEmail">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="emailAddress" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveCustomerByEmailResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customerEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCustomer">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="customerId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCustomerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="CustomerDeletionException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomer">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="customerEntity" type="tns:customerEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="UpdateCustomerException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAllCustomers">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveAllCustomersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customerEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
